@@ -1,7 +1,7 @@
 import type { Card, Transaction } from "../../types";
 import { MOCK_CARDS, MOCK_TRANSACTIONS } from "../../constants";
 
-const SIMULATED_DELAY = 300; // milliseconds
+const SIMULATED_DELAY = 500; // milliseconds
 
 const delay = (ms: number): Promise<void> => {
   return new Promise((resolve) => setTimeout(resolve, ms));
