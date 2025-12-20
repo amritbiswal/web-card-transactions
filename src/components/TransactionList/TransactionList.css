@@ -1,0 +1,50 @@
+.transaction-list-container {
+  scroll-behavior: smooth;
+}
+
+/* Chrome, Safari, Edge */
+.transaction-list-container::-webkit-scrollbar {
+  width: 8px;
+}
+
+.transaction-list-container::-webkit-scrollbar-track {
+  background: #f3f4f6;
+  border-radius: 4px;
+}
+
+.transaction-list-container::-webkit-scrollbar-thumb {
+  background: #6b7280;
+  border-radius: 4px;
+  transition: background 0.2s ease;
+}
+
+.transaction-list-container::-webkit-scrollbar-thumb:hover {
+  background: #1f2937;
+}
+
+/* Firefox */
+.transaction-list-container {
+  scrollbar-width: thin;
+  scrollbar-color: #6b7280 #f3f4f6;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .transaction-list-container {
+    max-height: 400px;
+  }
+
+  .transaction-list-container::-webkit-scrollbar {
+    width: 6px;
+  }
+}
+
+@media (max-width: 480px) {
+  .transaction-list-container {
+    max-height: 350px;
+  }
+
+  .transaction-list-container::-webkit-scrollbar {
+    width: 5px;
+  }
+}

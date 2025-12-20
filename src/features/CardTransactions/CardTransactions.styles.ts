@@ -4,7 +4,6 @@ export const containerStyles: CSSProperties = {
   minHeight: "100vh",
   display: "flex",
   flexDirection: "column",
-  justifyContent: "center",
   alignItems: "center",
   padding: "40px 20px",
   maxWidth: "1200px",

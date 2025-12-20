@@ -29,8 +29,8 @@ export const AmountFilter = ({ value, onChange }: AmountFilterProps) => {
         step="0.01"
         aria-label="Filter transactions by minimum amount"
         style={filterInputStyles}
-        // onFocus={(e) => Object.assign(e.target.style, filterInputFocusStyles)}
-        // onBlur={(e) => Object.assign(e.target.style, filterInputStyles)}
+        onFocus={(e) => Object.assign(e.target.style, filterInputFocusStyles)}
+        onBlur={(e) => Object.assign(e.target.style, filterInputStyles)}
       />
     </div>
   );

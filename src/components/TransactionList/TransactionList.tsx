@@ -1,5 +1,6 @@
 import type { Transaction as TransactionType } from "../../types";
 import { Transaction } from "../Transaction";
+import "./TransactionList.css";
 import {
   transactionListContainerStyles,
   emptyStateStyles,
@@ -39,7 +40,12 @@ export const TransactionList = ({
   }
 
   return (
-    <div style={transactionListContainerStyles}>
+    <div
+      style={transactionListContainerStyles}
+      className="transaction-list-container"
+      role="list"
+      aria-label="Transaction list"
+    >
       {transactions.map((transaction) => (
         <Transaction
           key={transaction.id}
