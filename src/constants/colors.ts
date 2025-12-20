@@ -1,0 +1,9 @@
+export const COLORS = {
+  PRIVATE_CARD: "#E5E7EB",
+  BUSINESS_CARD: "#BAE6FD",
+  PRIMARY: "#3B82F6",
+  TEXT_PRIMARY: "#1F2937",
+  TEXT_SECONDARY: "#6B7280",
+  BORDER: "#D1D5DB",
+  WHITE: "#FFFFFF",
+} as const;
