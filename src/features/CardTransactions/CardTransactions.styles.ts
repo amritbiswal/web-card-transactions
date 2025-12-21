@@ -1,4 +1,5 @@
 import type { CSSProperties } from "react";
+import { COLORS } from "../../constants/colors";
 
 export const containerStyles: CSSProperties = {
   minHeight: "100vh",
@@ -10,6 +11,7 @@ export const containerStyles: CSSProperties = {
   margin: "0 auto",
   width: "100%",
   boxSizing: "border-box",
+  backgroundColor: COLORS.BACKGROUND,
 };
 
 export const contentWrapperStyles: CSSProperties = {

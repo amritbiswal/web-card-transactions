@@ -11,7 +11,7 @@ export const filterLabelStyles: CSSProperties = {
   marginBottom: "8px",
   fontSize: "clamp(13px, 2vw, 14px)",
   fontWeight: "600",
-  color: COLORS.TEXT_PRIMARY,
+  color: COLORS.WHITE,
 };
 
 export const filterInputStyles: CSSProperties = {
@@ -28,4 +28,12 @@ export const filterInputStyles: CSSProperties = {
 export const filterInputFocusStyles: CSSProperties = {
   borderColor: COLORS.PRIMARY,
   boxShadow: `0 0 0 2px ${COLORS.PRIMARY}33`,
+};
+
+export const errorMessageStyles: CSSProperties = {
+  display: "block",
+  color: COLORS.ERROR,
+  fontSize: "clamp(12px, 1.8vw, 13px)",
+  marginTop: "4px",
+  fontWeight: "500",
 };

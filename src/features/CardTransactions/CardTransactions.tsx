@@ -19,6 +19,7 @@ export const CardTransactions = () => {
     selectedCard,
     transactions,
     filterAmount,
+    filterError,
     loading,
     error,
     handleCardSelect,
@@ -42,7 +43,11 @@ export const CardTransactions = () => {
           onSelectCard={handleCardSelect}
         />
 
-        <AmountFilter value={filterAmount} onChange={handleFilterChange} />
+        <AmountFilter
+          value={filterAmount}
+          onChange={handleFilterChange}
+          error={filterError}
+        />
 
         <TransactionList
           transactions={transactions}

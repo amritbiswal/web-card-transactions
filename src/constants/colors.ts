@@ -5,5 +5,7 @@ export const COLORS = {
   TEXT_PRIMARY: "#1F2937",
   TEXT_SECONDARY: "#6B7280",
   BORDER: "#D1D5DB",
-  WHITE: "#FFFFFF",
+  WHITE: "#d9d9d9",
+  BACKGROUND: "midnightblue",
+  ERROR: "#EF4444",
 } as const;
