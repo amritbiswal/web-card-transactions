@@ -1,6 +1,5 @@
 import type { Transaction as TransactionType } from "../../types";
 import { Transaction } from "../Transaction";
-import "./TransactionList.css";
 import {
   transactionListContainerStyles,
   emptyStateStyles,
@@ -42,7 +41,7 @@ export const TransactionList = ({
   return (
     <div
       style={transactionListContainerStyles}
-      className="transaction-list-container"
+      className="list-container-scrollbar"
       role="list"
       aria-label="Transaction list"
     >

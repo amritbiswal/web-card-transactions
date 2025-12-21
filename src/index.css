@@ -32,3 +32,54 @@ body {
     font-size: 13px;
   }
 }
+
+.list-container-scrollbar {
+  scroll-behavior: smooth;
+}
+
+/* Chrome, Safari, Edge */
+.list-container-scrollbar::-webkit-scrollbar {
+  width: 8px;
+}
+
+.list-container-scrollbar::-webkit-scrollbar-track {
+  background: #f3f4f6;
+  border-radius: 4px;
+}
+
+.list-container-scrollbar::-webkit-scrollbar-thumb {
+  background: #6b7280;
+  border-radius: 4px;
+  transition: background 0.2s ease;
+}
+
+.list-container-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #1f2937;
+}
+
+/* Firefox */
+.list-container-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: #6b7280 #f3f4f6;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .list-container-scrollbar {
+    max-height: 400px;
+  }
+
+  .list-container-scrollbar::-webkit-scrollbar {
+    width: 6px;
+  }
+}
+
+@media (max-width: 480px) {
+  .list-container-scrollbar {
+    max-height: 350px;
+  }
+
+  .list-container-scrollbar::-webkit-scrollbar {
+    width: 5px;
+  }
+}
