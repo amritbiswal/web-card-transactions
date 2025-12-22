@@ -16,6 +16,9 @@ dist-ssr
 package-lock.json
 yarn.lock
 
+# Coverage directory
+coverage/
+
 
 # Editor directories and files
 .vscode/*

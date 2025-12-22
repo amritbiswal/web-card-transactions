@@ -1,12 +1,23 @@
 import { useState, useCallback, useMemo, useEffect } from "react";
-import type { Card } from "../../types";
-import { useCards, useTransactions } from "../../hooks";
-import { parseAmount } from "../../utils";
+import type { Card } from "../types";
+import { useCards, useTransactions } from ".";
+import { parseAmount } from "../utils";
 
+interface UseCardTransactionsReturnType {
+  cards: Card[];
+  selectedCard: Card | null;
+  transactions: any[];
+  filterAmount: string;
+  filterError: string;
+  loading: boolean;
+  error: string | null;
+  handleCardSelect: (card: Card) => void;
+  handleFilterChange: (value: string) => void;
+}
 /**
  * Custom hook to manage card transactions feature logic
  */
-export const useCardTransactions = () => {
+export const useCardTransactions = (): UseCardTransactionsReturnType => {
   const [selectedCard, setSelectedCard] = useState<Card | null>(null);
   const [filterAmount, setFilterAmount] = useState<string>("");
   const [filterError, setFilterError] = useState<string>("");

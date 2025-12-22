@@ -22,6 +22,7 @@ export const AmountFilter = ({ value, onChange, error }: AmountFilterProps) => {
         Amount Filter
       </label>
       <input
+        role="amount-filter"
         id="amount-filter"
         type="text"
         placeholder="Enter minimum amount"

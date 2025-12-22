@@ -5,7 +5,7 @@ import { useState, useEffect } from "react";
 interface UseCardsReturnType {
   cards: Card[];
   loading: boolean;
-  error: Error | null;
+  error: string | null;
 }
 
 // Hook implementation goes here
@@ -13,7 +13,7 @@ interface UseCardsReturnType {
 export const useCards = (): UseCardsReturnType => {
   const [cards, setCards] = useState<Card[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
-  const [error, setError] = useState<Error | null>(null);
+  const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
     const fetchCards = async () => {
@@ -23,9 +23,12 @@ export const useCards = (): UseCardsReturnType => {
         setCards(data);
         setError(null);
       } catch (error) {
-        setError(
-          error instanceof Error ? error : new Error("Failed to fetch cards")
-        );
+        console.error("Error fetching cards:", error);
+        const errorMessage =
+          error instanceof Error
+            ? error.message
+            : "An unexpected error occurred while loading cards";
+        setError(errorMessage);
       } finally {
         setLoading(false);
       }

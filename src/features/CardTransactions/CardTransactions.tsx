@@ -1,7 +1,7 @@
 import { CardList } from "../../components/CardList";
 import { AmountFilter } from "../../components/AmountFilter";
 import { TransactionList } from "../../components/TransactionList";
-import { useCardTransactions } from "./useCardTransactions";
+import { useCardTransactions } from "../../hooks/useCardTransactions";
 import {
   containerStyles,
   contentWrapperStyles,
@@ -27,7 +27,7 @@ export const CardTransactions = () => {
   } = useCardTransactions();
 
   if (error) {
-    return <div style={errorStyles}>Error: {error.message}</div>;
+    return <div style={errorStyles}>Error: {error}</div>;
   }
 
   if (loading && cards.length === 0) {
