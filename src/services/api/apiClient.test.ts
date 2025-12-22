@@ -1,6 +1,5 @@
 import { describe, it, expect, beforeEach, vi } from "vitest";
 import { apiClient } from "./apiClient";
-import type { Card, Transaction } from "../../types";
 
 // Mock the JSON data imports
 vi.mock("../../data/cards.json", () => ({
