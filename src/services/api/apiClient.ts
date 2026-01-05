@@ -9,13 +9,13 @@ const delay = (ms: number): Promise<void> => {
 export const apiClient = {
   async getCards(): Promise<Card[]> {
     await delay(SIMULATED_DELAY);
-    const cards = await (await import("../../data/cards.json")).default;
+    const cards: Card[] = (await import("../../data/cards.json")).default;
     return JSON.parse(JSON.stringify(cards));
   },
 
   async getTransactions(cardId: string): Promise<Transaction[]> {
     await delay(SIMULATED_DELAY);
-    const transactions: Record<string, Transaction[]> = await (
+    const transactions: Record<string, Transaction[]> = (
       await import("../../data/transactions.json")
     ).default;
 
