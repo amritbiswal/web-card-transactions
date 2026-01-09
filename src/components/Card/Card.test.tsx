@@ -114,7 +114,6 @@ describe("Card Component", () => {
       );
       const cardElement = screen.getByRole("button");
       expect(cardElement).toHaveStyle(`background-color: #FF0000`);
-      // Additional style checks for isSelected can be added here
     });
   });
 });

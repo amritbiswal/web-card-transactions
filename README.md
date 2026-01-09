@@ -493,7 +493,7 @@ export interface Transaction {
   id: string;
   description: string;
   amount: number;
-  date: string; // Add this
+  date: string;
 }
 ```
 
@@ -505,7 +505,7 @@ export interface Transaction {
   "id": "1",
   "description": "Amazon purchase",
   "amount": 123.88,
-  "date": "2025-12-20" // Add this
+  "date": "2025-12-20"
 }
 ```
 
@@ -559,20 +559,15 @@ src/
 ### Writing Tests
 
 ```typescript
-import { describe, it, expect, vi } from "vitest";
 import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
+import Card from "./Card";
 
-describe("Card Component", () => {
-  it("should call onSelect when clicked", async () => {
-    const mockFn = vi.fn();
-    const user = userEvent.setup();
-
-    render(<Card onSelect={mockFn} />);
-    await user.click(screen.getByRole("button"));
-
-    expect(mockFn).toHaveBeenCalledTimes(1);
-  });
+it("calls onSelect when clicked", async () => {
+  const mockFn = vi.fn();
+  render(<Card card={mockCard} isSelected={false} onClick={mockFn} />);
+  await userEvent.click(screen.getByRole("button"));
+  expect(mockFn).toHaveBeenCalledTimes(1);
 });
 ```
 

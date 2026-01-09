@@ -1,7 +1,6 @@
 import type { ReactElement } from "react";
 import { render, type RenderOptions } from "@testing-library/react";
 
-// Add any providers here (Router, Context, etc.)
 const AllTheProviders = ({
   children,
 }: {

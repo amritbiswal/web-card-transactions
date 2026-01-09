@@ -18,7 +18,7 @@ export const noCardStyles: CSSProperties = {
   alignItems: "center",
   justifyContent: "center",
 };
-// Add media query support
+
 export const getResponsiveCardListStyles = (): string => `
   @media (max-width: 768px) {
     .card-list-container {
