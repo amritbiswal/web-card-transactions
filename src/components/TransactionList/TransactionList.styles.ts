@@ -3,7 +3,7 @@ import { COLORS } from "../../constants";
 
 export const transactionListContainerStyles: CSSProperties = {
   minHeight: "200px",
-  maxHeight: "600px",
+  maxHeight: "400px",
   overflowY: "auto",
   overflowX: "hidden",
   paddingRight: "8px",
